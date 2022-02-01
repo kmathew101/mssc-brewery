@@ -22,6 +22,12 @@ public class BeerController {
         this.beerService = beerService;
     }
 
+    /**
+     * note need to supplye a valid UUID
+     * example 83DD16B7-03C2-43DF-B348-0C66A4AA53AC
+     * @param beerId
+     * @return
+     */
     @GetMapping({"/{beerId}"})
     public ResponseEntity<BeerDto> getBeer(@PathVariable("beerId") UUID beerId){
 
